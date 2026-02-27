@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Morning Brief</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue: #1f4fff;
+  --black: #0f1115;
+  --gray: #f4f6fa;
+  --darkgray: #666;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  background: var(--gray);
+  color: #111;
+}
+
+.navbar {
+  background: var(--black);
+  color: white;
+  padding: 16px 30px;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+h2 {
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-size: 16px;
+  line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+MORNING BRIEF
+</div>
+
+<div class="container">
+<h2>Today's Brief</h2>
+
+{% if issue %}
+<pre>{{ issue.content }}</pre>
+{% else %}
+<p>No news generated yet.</p>
+{% endif %}
+
+</div>
+
+</body>
+</html>
